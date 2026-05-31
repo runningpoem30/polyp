@@ -108,7 +108,6 @@ export function investigationBox(result: InvestigationResult): void {
           '',
         ]
       : []),
-    `  ${t.label('Confidence')}  ${confColor(`${confPct}%`)}`,
     '',
   ].join('\n');
 

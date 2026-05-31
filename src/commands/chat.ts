@@ -206,9 +206,6 @@ function renderAnswer(question: string, result: AgentAction): void {
     lines.push('');
   }
 
-  lines.push(`  ${t.label('Confidence')}  ${confColor(`${confPct}%`)}`);
-  lines.push('');
-
   const content = lines.join('\n');
 
   console.log(
@@ -233,8 +230,12 @@ function parseJSON<T>(text: string): T {
     // Try to find any JSON object in the text
     const objectMatch = jsonStr.match(/\{[\s\S]*\}/);
     if (objectMatch) {
-      return JSON.parse(objectMatch[0]);
+      try {
+        return JSON.parse(objectMatch[0]);
+      } catch {
+        // Fallthrough
+      }
     }
-    throw new Error('Failed to parse LLM response as JSON');
+    throw new Error(`Failed to parse LLM response as JSON.\nRaw output was:\n${text}`);
   }
 }
