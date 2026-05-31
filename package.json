@@ -1,0 +1,45 @@
+{
+  "name": "polyp",
+  "version": "0.1.0",
+  "description": "AI-powered organizational intelligence — built on Coral",
+  "type": "module",
+  "bin": {
+    "polyp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "coral",
+    "ai",
+    "agent",
+    "cli",
+    "organizational-intelligence",
+    "knowledge-management"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@google/genai": "^2.7.0",
+    "boxen": "^8.0.1",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "gradient-string": "^3.0.0",
+    "openai": "^4.77.0",
+    "ora": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/gradient-string": "^1.1.6",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.3"
+  }
+}
