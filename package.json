@@ -1,6 +1,6 @@
 {
   "name": "polyp-ai",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "AI-powered organizational intelligence — built on Coral",
   "type": "module",
   "bin": {
@@ -21,7 +21,11 @@
     "organizational-intelligence",
     "knowledge-management"
   ],
-  "author": "",
+  "author": "runningpoem30 (Arya Pathak)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/runningpoem30/AutoMaintainer---AI-ASSEMBLE-HACKATHON.git"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
